@@ -13,6 +13,8 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         // This is without using packages or creating a filter class
+        if ($request->has('all'))
+            return ProductResource::collection(Product::all());
 
         $products = Product::with('category');
 
