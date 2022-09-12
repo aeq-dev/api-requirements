@@ -23,7 +23,7 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function price(): HasOne
+    public function prices(): HasOne
     {
         return $this->hasOne(Price::class);
     }
